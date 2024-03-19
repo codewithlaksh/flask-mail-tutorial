@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Crash Course</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container my-3">
+        <h1 class="text-center">Contact Us</h1>
+        <p class="text-center">Our team will get in touch with you soon.</p>
+        <form action="{{url_for('send')}}" method="POST">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname" placeholder="First Name" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Email Address" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" placeholder="Phone Number" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="email">Message</label>
+                <textarea name="message" id="message" placeholder="Ellaborate your concern" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        /* Swal.fire({
+            title: 'Welcome!',
+            text: 'This is a SweetAlert example.',
+            icon: 'success',
+            confirmButtonText: 'Cool!'
+        }); */
+    </script>
+</body>
+</html>
